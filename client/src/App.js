@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions';
-import './App.css';
 import Header from './components/Header';
 
 class App extends Component {
