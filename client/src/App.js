@@ -11,14 +11,12 @@ class App extends Component {
 
   render() {
     const Landing = () => <h2>Landing</h2>;
-    const Testing = () => <h2>Testing Route</h2>;
     return (
       <div className="App">
         <Header />
         <BrowserRouter>
           <div>
             <Route path="/" component={Landing} />
-            <Route path="/test" component={Testing} />
           </div>
         </BrowserRouter>
         {/* <a href="/auth/google">Sign in with Google</a> */}

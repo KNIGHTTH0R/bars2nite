@@ -1,3 +1,15 @@
+@import 'abstract';
+@import './components/app';
+@import './components/header';
+
 body {
-  background-color: beige;
+  background-image: linear-gradient(
+    to right bottom,
+    ($color-primary-light),
+    ($color-primary-dark)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
 }
