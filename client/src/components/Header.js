@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../store/actions';
 
@@ -41,7 +41,9 @@ export class Header extends Component {
     return (
       <div className="Header">
         <nav className="navigation">
-          <span className="navigation__header">Nightlife</span>
+          <span className="navigation__header">
+            <Link to="/">Bars2Nite</Link>
+          </span>
           <form action="#" className="search">
             <input
               type="text"
