@@ -1,23 +1,65 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import * as actions from '../store/actions';
 
 export class Header extends Component {
+  state = {
+    searchInput: ''
+  };
+
+  inputChangeHandler = e => {
+    this.setState({ searchInput: e.target.value });
+  };
+
+  keyPressHandler = e => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      this.onSearchBars();
+    }
+  };
+
+  onSearchBars = () => {
+    this.props.onSearchBars(this.state.searchInput);
+    this.setState({ searchInput: '' });
+    this.props.history.push('/search');
+  };
+
   render() {
-    console.log(this.props.auth);
-    let authText = this.props.auth ? "I'm logged in" : "I'm logged out";
+    const authLinks = (
+      <li className="navigation__item">
+        <a href="/auth/google">Login with Google</a>
+      </li>
+    );
+
+    const guestLinks = (
+      <li className="navigation__item">
+        <a href="/api/logout">Logout</a>
+      </li>
+    );
 
     return (
       <div className="Header">
         <nav className="navigation">
+          <span className="navigation__header">Nightlife</span>
+          <form action="#" className="search">
+            <input
+              type="text"
+              className="search__input"
+              placeholder="Your city or zip code"
+              value={this.state.searchInput}
+              onChange={this.inputChangeHandler}
+              onKeyDown={this.keyPressHandler}
+            />
+            <i
+              className="fa fa-search search__icon"
+              aria-hidden="true"
+              onClick={this.onSearchBars}
+            />
+          </form>
+
           <ul className="navigation__list">
-            <li className="navigation__header">Nightlife</li>
-            <li className="navigation__item">
-              <a href="/auth/google">Login with Google</a>
-            </li>
-            <li className="navigation__item">
-              <a href="/api/logout">Logout</a>
-            </li>
-            <li>{authText}</li>
+            {this.props.auth ? authLinks : guestLinks}
           </ul>
         </nav>
       </div>
@@ -31,4 +73,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Header);
+export default connect(
+  mapStateToProps,
+  actions
+)(withRouter(Header));

@@ -3,6 +3,12 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions';
 import Header from './components/Header';
+import Landing from './components/Landing';
+import SearchPage from './components/SearchPage';
+
+// testing purpose
+import axios from 'axios';
+window.axios = axios;
 
 class App extends Component {
   componentDidMount = () => {
@@ -10,16 +16,15 @@ class App extends Component {
   };
 
   render() {
-    const Landing = () => <h2>Landing</h2>;
     return (
       <div className="App">
-        <Header />
         <BrowserRouter>
-          <div>
-            <Route path="/" component={Landing} />
+          <div style={{ padding: '1rem' }}>
+            <Header />
+            <Route path="/" exact component={Landing} />
+            <Route path="/search" exact component={SearchPage} />
           </div>
         </BrowserRouter>
-        {/* <a href="/auth/google">Sign in with Google</a> */}
       </div>
     );
   }
