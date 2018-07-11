@@ -8,8 +8,11 @@ const SearchItem = props => {
         <h2 className="SearchItem__name">{props.name}</h2>
       </div>
       <p className="SearchItem__price">{props.price}</p>
-      <p className="SearchItem__rating">{props.rating}</p>
-      <p className="SearchItem__going">Going: 0</p>
+      {/* <p className="SearchItem__rating">{props.rating}</p> */}
+      <button className="SearchItem__going">
+        <span className="SearchItem__going--visible">Attend</span>
+        <span className="SearchItem__going--invisible">Going: 0</span>
+      </button>
     </div>
   );
 };
