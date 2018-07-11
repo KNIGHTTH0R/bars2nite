@@ -61,14 +61,21 @@
 
 .SearchPage {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 .SearchItem {
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   width: 250px;
   position: relative;
-  background-color: #cacaca;
-  padding: 1rem; }
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s; }
+  .SearchItem:hover {
+    transform: translateY(-2%);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3); }
   .SearchItem__name {
     text-align: center; }
   .SearchItem__details-box {
@@ -104,7 +111,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     overflow: hidden;
-    background-image: linear-gradient(to right, #f80759, #bc4e9c);
+    background-image: linear-gradient(to right bottom, #f80759, #bc4e9c);
     border-radius: 100px;
     position: relative;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }

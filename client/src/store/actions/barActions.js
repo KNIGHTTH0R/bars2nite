@@ -21,6 +21,15 @@ export const onSearchBars = location => dispatch => {
     });
 };
 
-// axiosApi.get('/books/my-list', {
-//   headers: { Authorization: localStorage.jwtToken }
-// });
+export const onReserveBar = data => dispatch => {
+  console.log(data);
+  const barData = {
+    name: data.name,
+    yelpId: data.yelpId
+  };
+
+  axios
+    .post('/api/reserve', barData)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+};

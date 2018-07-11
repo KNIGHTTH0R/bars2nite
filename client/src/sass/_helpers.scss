@@ -1,9 +1,17 @@
 .SearchItem {
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   width: 250px;
   position: relative;
-  background-color: #cacaca;
+  background-color: #e0e0e0;
   padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-2%);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  }
 
   &__name {
     text-align: center;
@@ -54,7 +62,7 @@
     text-transform: uppercase;
     overflow: hidden;
     background-image: linear-gradient(
-      to right,
+      to right bottom,
       $color-primary-light,
       $color-primary-dark
     );

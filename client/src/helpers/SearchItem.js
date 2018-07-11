@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../store/actions';
 
 const SearchItem = props => {
   return (
@@ -9,12 +11,18 @@ const SearchItem = props => {
       </div>
       <p className="SearchItem__price">{props.price}</p>
       {/* <p className="SearchItem__rating">{props.rating}</p> */}
-      <button className="SearchItem__going">
-        <span className="SearchItem__going--visible">Attend</span>
+      <button
+        className="SearchItem__going"
+        onClick={() => props.onReserveBar(props)}
+      >
+        <span className="SearchItem__going--visible">RSPV</span>
         <span className="SearchItem__going--invisible">Going: 0</span>
       </button>
     </div>
   );
 };
 
-export default SearchItem;
+export default connect(
+  null,
+  actions
+)(SearchItem);

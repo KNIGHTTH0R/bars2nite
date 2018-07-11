@@ -1,3 +1,3 @@
 export { fetchUser } from './authAction';
 
-export { onSearchBars } from './barActions';
+export { onSearchBars, onReserveBar } from './barActions';

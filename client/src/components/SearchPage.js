@@ -11,6 +11,7 @@ export class SearchPage extends Component {
           <SearchItem
             key={bar.id}
             name={bar.name}
+            yelpId={bar.id}
             img={bar.image_url}
             price={bar.price}
             rating={bar.rating}
