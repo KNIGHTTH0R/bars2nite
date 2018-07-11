@@ -12,11 +12,13 @@ const SearchItem = props => {
       <p className="SearchItem__price">{props.price}</p>
       {/* <p className="SearchItem__rating">{props.rating}</p> */}
       <button
-        className="SearchItem__going"
+        className="SearchItem__going rsvp"
         onClick={() => props.onReserveBar(props)}
       >
         <span className="SearchItem__going--visible">RSPV</span>
-        <span className="SearchItem__going--invisible">Going: 0</span>
+        <span className="SearchItem__going--invisible">
+          Going: {props.going}
+        </span>
       </button>
     </div>
   );

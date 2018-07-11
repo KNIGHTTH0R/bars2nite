@@ -5,7 +5,6 @@ const yelpApiKey =
   'dbzN6G7_Yh1hIWyPFbQqnHTJqFfC8hzLyZbFzJ_i_0vq5GsugIIXKTQbTak62E8mF9wEd6f5rzYpG1Sh2CxyZUiIIF6FyhPubiFneD1IYZORweE6hjj0SxDgDVBFW3Yx';
 
 export const onSearchBars = location => dispatch => {
-  console.log(location);
   axios
     .get(
       `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=nightlife&location=${location}`,
@@ -21,15 +20,43 @@ export const onSearchBars = location => dispatch => {
     });
 };
 
+export const onLoadReservedBars = () => dispatch => {
+  axios
+    .get('/api/bars')
+    .then(res =>
+      dispatch({
+        type: actionTypes.LOAD_RESERVED_BARS,
+        payload: res.data
+      })
+    )
+    .catch(e => console.log(e));
+};
+
+export const onLoadUserReservedBars = () => dispatch => {
+  axios.get('/api/user-bars').then(res =>
+    dispatch({
+      type: actionTypes.LOAD_USER_RESERVED_BARS,
+      payload: res.data
+    })
+  );
+};
+
 export const onReserveBar = data => dispatch => {
-  console.log(data);
   const barData = {
     name: data.name,
-    yelpId: data.yelpId
+    yelpId: data.yelpId,
+    image: data.img,
+    price: data.price,
+    location: data.location,
+    website: data.website
   };
+
+  console.log(barData);
 
   axios
     .post('/api/reserve', barData)
-    .then(res => console.log(res))
+    .then(res => {
+      dispatch(onLoadUserReservedBars());
+    })
     .catch(err => console.log(err));
 };

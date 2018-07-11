@@ -52,7 +52,6 @@
   &__going {
     display: block;
     width: 100%;
-    cursor: pointer;
     text-align: center;
     margin: 8px auto;
     padding: 0;
@@ -61,14 +60,27 @@
     font-size: 1rem;
     text-transform: uppercase;
     overflow: hidden;
-    background-image: linear-gradient(
-      to right bottom,
-      $color-primary-light,
-      $color-primary-dark
-    );
+
     border-radius: 100px;
     position: relative;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+
+    &.rsvp {
+      cursor: pointer;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+    }
+
+    &.reserved {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-green-light,
+        $color-green-dark
+      );
+    }
 
     & > * {
       display: inline-block;

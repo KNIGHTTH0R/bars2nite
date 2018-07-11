@@ -21,20 +21,22 @@ export class Header extends Component {
 
   onSearchBars = () => {
     this.props.onSearchBars(this.state.searchInput);
-    this.setState({ searchInput: '' });
     this.props.history.push('/search');
+    this.setState({ searchInput: '' });
   };
 
   render() {
+    console.log('auth status: ' + this.props.auth);
+
     const authLinks = (
       <li className="navigation__item">
-        <a href="/auth/google">Login with Google</a>
+        <a href="/api/logout">Logout</a>
       </li>
     );
 
     const guestLinks = (
       <li className="navigation__item">
-        <a href="/api/logout">Logout</a>
+        <a href="/auth/google">Login with Google</a>
       </li>
     );
 

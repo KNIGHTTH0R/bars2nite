@@ -1,4 +1,6 @@
 .Header {
+  position: relative;
+  z-index: 200;
   .navigation {
     display: flex;
     justify-content: space-between;

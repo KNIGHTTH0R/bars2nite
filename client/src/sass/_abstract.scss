@@ -3,12 +3,13 @@ $color-primary: #db084e;
 $color-primary-light: #f80759;
 $color-primary-dark: #bc4e9c;
 
+$color-green-light: #29c081;
+$color-green-dark: #2f7a77;
+
 //mixins
 @mixin absCenter {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
