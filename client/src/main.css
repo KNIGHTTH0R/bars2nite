@@ -25,6 +25,9 @@
   min-height: 85vh;
   box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.3);
   position: relative; }
+  @media only screen and (max-width: 1000px) {
+    .App {
+      margin: 0; } }
 
 .Header {
   position: relative;
@@ -43,11 +46,17 @@
         font-size: 1.5rem;
         margin: 0 5px;
         color: #bc4e9c; }
+        @media only screen and (max-width: 700px) {
+          .Header .navigation__header .glass-icon {
+            font-size: 1.2rem; } }
       .Header .navigation__header a {
         text-decoration: none;
         font-family: 'Londrina Shadow', cursive;
         font-size: 2.6rem;
         color: #bc4e9c; }
+        @media only screen and (max-width: 700px) {
+          .Header .navigation__header a {
+            font-size: 2rem; } }
     .Header .navigation .search {
       display: flex;
       justify-content: center;
@@ -176,6 +185,9 @@
     font-size: 2.5rem;
     font-weight: 300;
     color: #4e4e4e; }
+    @media only screen and (max-width: 700px) {
+      .Event__heading {
+        font-size: 2rem; } }
   .Event__content {
     display: flex;
     flex-direction: column;
@@ -311,6 +323,10 @@
   padding: 1.2rem;
   transition: all 0.3s;
   position: relative; }
+  @media only screen and (max-width: 700px) {
+    .EventItem {
+      min-width: 0;
+      width: 90%; } }
   .EventItem:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -320,6 +336,10 @@
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid rgba(188, 78, 156, 0.6); }
+    @media only screen and (max-width: 700px) {
+      .EventItem__image-box {
+        width: 70px;
+        height: 70px; } }
     .EventItem__image-box img {
       height: 100%;
       transform: scale(1.5) translateX(10px);
@@ -329,6 +349,9 @@
   .EventItem__details {
     margin-left: 1rem;
     font-weight: 300; }
+    @media only screen and (max-width: 700px) {
+      .EventItem__details {
+        font-size: 0.8rem; } }
     .EventItem__details h2 {
       display: inline-block;
       font-weight: 300;

@@ -55,7 +55,7 @@ export class SearchPage extends Component {
           let index = reservedBarIds.indexOf(bar.id);
           return (
             <SearchItem
-              key={reservedBars[index].id}
+              key={reservedBars[index].yelpId}
               name={reservedBars[index].name}
               yelpId={reservedBars[index].yelpId}
               img={reservedBars[index].image}
