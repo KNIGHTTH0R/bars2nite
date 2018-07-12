@@ -69,8 +69,16 @@ export class SearchPage extends Component {
       });
     }
 
+    let searchContent;
+
+    if (this.props.loading) {
+      searchContent = <div class="loader">Loading...</div>;
+    } else {
+      searchContent = searchedBars;
+    }
+
     // console.log(this.props.bars);
-    return <div className="SearchPage">{searchedBars}</div>;
+    return <div className="SearchPage">{searchContent}</div>;
   }
 }
 
@@ -79,7 +87,8 @@ const mapStateToProps = state => {
     auth: state.auth,
     bars: state.bars.searchedBars,
     reservedBars: state.bars.reservedBars,
-    userBars: state.bars.userBars
+    userBars: state.bars.userBars,
+    loading: state.bars.loading
   };
 };
 

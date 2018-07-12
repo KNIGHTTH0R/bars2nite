@@ -25,18 +25,26 @@ export class AllEvents extends Component {
       });
     }
 
-    return (
-      <div className="Event">
-        <h2 className="Event__heading">All Events</h2>
-        <div className="Event__content">{eventContent}</div>
-      </div>
-    );
+    let content;
+    if (this.props.loading) {
+      content = <div class="loader">Loading...</div>;
+    } else {
+      content = (
+        <div>
+          <h2 className="Event__heading">All Events</h2>
+          <div className="Event__content">{eventContent}</div>
+        </div>
+      );
+    }
+
+    return <div className="Event">{content}</div>;
   }
 }
 
 const mapStateToProps = state => {
   return {
-    reservedBars: state.bars.reservedBars
+    reservedBars: state.bars.reservedBars,
+    loading: state.bars.loading
   };
 };
 

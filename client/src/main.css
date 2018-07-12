@@ -111,7 +111,8 @@
 .SearchPage {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding: 2rem 0; }
 
 .Event {
   padding: 1rem;
@@ -310,14 +311,14 @@
       font-size: 1rem; }
 
 .loader {
-  color: #ffffff;
+  color: #f80759;
   font-size: 90px;
   text-indent: -9999em;
   overflow: hidden;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  margin: 72px auto;
+  margin: 160px auto;
   position: relative;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
