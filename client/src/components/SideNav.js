@@ -6,7 +6,10 @@ const SideNav = props => {
   const authLinks = (
     <div className="links-container">
       <li className="links-container__item">
-        <Link to="/events">Events</Link>
+        <Link to="/events">Your RSVP</Link>
+      </li>
+      <li className="links-container__item">
+        <Link to="/all-events">Popular Events</Link>
       </li>
       <li className="links-container__item">
         <a href="/api/logout">Logout</a>
