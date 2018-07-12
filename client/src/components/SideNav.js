@@ -15,9 +15,14 @@ const SideNav = props => {
   );
 
   const guestLinks = (
-    <li className="links-container__item">
-      <a href="/auth/google">Login with Google</a>
-    </li>
+    <div className="links-container">
+      <li className="links-container__item">
+        <Link to="/all-events">All Events</Link>
+      </li>
+      <li className="links-container__item">
+        <a href="/auth/google">Login</a>
+      </li>
+    </div>
   );
 
   return <div className="side-nav">{props.auth ? authLinks : guestLinks}</div>;

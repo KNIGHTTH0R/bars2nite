@@ -11,22 +11,18 @@ export class SearchPage extends Component {
   };
 
   render() {
-    let searchedBars;
     let userBarIds;
     let userBars = this.props.userBars;
-    if (userBars) {
-      userBarIds = userBars.map(bar => bar.yelpId);
-    }
+    userBarIds = userBars ? userBars.map(bar => bar.yelpId) : [];
 
     let reservedBarIds;
     let reservedBars = this.props.reservedBars;
-    if (reservedBars) {
-      reservedBarIds = reservedBars.map(bar => bar.yelpId);
-    }
+    reservedBarIds = reservedBars ? reservedBars.map(bar => bar.yelpId) : [];
 
+    let searchedBars;
     if (this.props.bars) {
       searchedBars = this.props.bars.map(bar => {
-        if (userBarIds.includes(bar.id)) {
+        if (userBarIds.includes(bar.id) || false) {
           // console.log(userBarIds);
           let index = userBarIds.indexOf(bar.id);
           return (

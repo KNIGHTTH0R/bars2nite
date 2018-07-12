@@ -13,7 +13,7 @@
     left: 0;
 
     height: 100%;
-    opacity: 0.2;
+    opacity: 0.25;
     overflow: hidden;
 
     &__content {
@@ -29,8 +29,12 @@
 
     &__primary {
       font-family: 'Londrina Shadow', cursive;
-      font-size: 4rem;
+      font-size: 4.4rem;
       margin: 10px auto;
+      background-image: linear-gradient(to right, $color-primary, #a028be);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     &__secondary {

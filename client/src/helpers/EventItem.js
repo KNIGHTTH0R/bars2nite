@@ -3,6 +3,16 @@ import { connect } from 'react-redux';
 import * as actions from '../store/actions';
 
 const EventItem = props => {
+  let button;
+  console.log(props.auth);
+  if (props.auth) {
+    button = (
+      <button type="button" onClick={() => props.onCancelReservation(props)}>
+        Cancel RSVP
+      </button>
+    );
+  }
+
   return (
     <div className="EventItem">
       <div className="EventItem__image-box">
@@ -11,13 +21,13 @@ const EventItem = props => {
 
       <div className="EventItem__details">
         <h2>
-          <a href={props.website}>{props.name}</a>
+          <a href={props.website} target="_blank">
+            {props.name}
+          </a>
         </h2>
         <hr />
         <p>{props.location}</p>
-        <button type="button" onClick={() => props.onCancelReservation(props)}>
-          Cancel RSVP
-        </button>
+        {button}
       </div>
 
       <div className="EventItem__going">
@@ -28,7 +38,13 @@ const EventItem = props => {
   );
 };
 
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(EventItem);

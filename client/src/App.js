@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Landing from './components/Landing';
 import SearchPage from './components/SearchPage';
 import Events from './components/Events';
+import AllEvents from './components/AllEvents';
 
 // testing purpose
 import axios from 'axios';
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/" exact component={Landing} />
             <Route path="/search" exact component={SearchPage} />
             <Route path="/events" exact component={Events} />
+            <Route path="/all-events" exact component={AllEvents} />
           </div>
         </BrowserRouter>
       </div>
