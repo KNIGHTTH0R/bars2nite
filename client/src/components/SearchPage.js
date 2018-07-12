@@ -22,8 +22,7 @@ export class SearchPage extends Component {
     let searchedBars;
     if (this.props.bars) {
       searchedBars = this.props.bars.map(bar => {
-        if (userBarIds.includes(bar.id) || false) {
-          // console.log(userBarIds);
+        if (userBarIds.includes(bar.id)) {
           let index = userBarIds.indexOf(bar.id);
           return (
             <ReservedItem

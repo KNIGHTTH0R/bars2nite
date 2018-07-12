@@ -95,12 +95,20 @@ module.exports = app => {
         bar.guestlist.splice(index, 1);
         bar.numberGoing--;
 
-        try {
-          bar.save();
-          res.send('reservation canceled successfully');
-        } catch (err) {
-          console.log(err);
-          res.status(422).send(err);
+        if (bar.guestlist.length === 0) {
+          bar
+            .remove()
+            .then(() =>
+              res.send('Bar removed from list because guestlist is empty.')
+            );
+        } else {
+          try {
+            bar.save();
+            res.send('reservation canceled successfully');
+          } catch (err) {
+            console.log(err);
+            res.status(422).send(err);
+          }
         }
       } else {
         res.status(404).send({ error: 'bar not found' });

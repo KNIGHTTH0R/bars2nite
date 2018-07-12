@@ -2,23 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../store/actions';
 
-const EventItem = props => {
-  let button;
-  let rsvp;
-  if (props.auth) {
-    button = (
-      <button type="button" onClick={() => props.onCancelReservation(props)}>
-        Cancel RSVP
-      </button>
-    );
-
-    rsvp = (
-      <div className="EventItem__rsvped">
-        <span>RSVP'd</span>
-      </div>
-    );
-  }
-
+const EventItemView = props => {
   return (
     <div className="EventItem">
       <div className="EventItem__image-box">
@@ -33,15 +17,12 @@ const EventItem = props => {
         </h2>
         <hr />
         <p>{props.location}</p>
-        <span>{button}</span>
       </div>
 
       <div className="EventItem__going">
         <p>{props.going}</p>
         <p>going</p>
       </div>
-
-      {rsvp}
     </div>
   );
 };
@@ -55,4 +36,4 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps,
   actions
-)(EventItem);
+)(EventItemView);

@@ -9,7 +9,7 @@ const SideNav = props => {
         <Link to="/events">Your RSVP</Link>
       </li>
       <li className="links-container__item">
-        <Link to="/all-events">Popular Events</Link>
+        <Link to="/all-events">All Events</Link>
       </li>
       <li className="links-container__item">
         <a href="/api/logout">Logout</a>

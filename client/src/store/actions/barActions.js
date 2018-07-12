@@ -83,6 +83,7 @@ export const onCancelReservation = data => dispatch => {
     .post('/api/cancel', barData)
     .then(res => {
       dispatch(onLoadUserReservedBars());
+      dispatch(onLoadReservedBars());
     })
     .catch(e => console.log(e));
 };

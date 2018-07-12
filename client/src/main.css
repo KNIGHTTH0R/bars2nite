@@ -281,7 +281,7 @@
       cursor: pointer;
       display: inline-block;
       text-align: center;
-      margin: 8px auto;
+      margin: 0px 0;
       padding: 10px 15px;
       color: #ececec;
       font-weight: 300;
@@ -311,6 +311,14 @@
       font-weight: 300;
       text-align: center;
       font-size: 1rem; }
+  .EventItem__rsvped {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    transform: rotate(-16deg);
+    color: rgba(41, 192, 129, 0.5);
+    font-size: 1.5rem;
+    font-weight: 700; }
 
 .loader {
   color: #f80759;
