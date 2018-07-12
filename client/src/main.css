@@ -105,8 +105,9 @@
       color: transparent; }
     .Landing .header-box__secondary {
       text-transform: uppercase;
-      letter-spacing: 20px;
-      margin-right: -20px; }
+      letter-spacing: 25px;
+      margin-right: -25px;
+      color: #4e4e4e; }
 
 .SearchPage {
   display: flex;
@@ -147,9 +148,10 @@
         .SideNav .side-nav .links-container__item a {
           padding: 5px 8px;
           text-decoration: none;
-          font-weight: 300; }
+          font-weight: 300;
+          transition: all 0.3s; }
           .SideNav .side-nav .links-container__item a:hover {
-            background-color: #2e2d2d;
+            background-color: #db084e;
             color: #fff; }
 
 .SearchItem {

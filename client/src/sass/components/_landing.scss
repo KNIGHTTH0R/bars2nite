@@ -39,8 +39,9 @@
 
     &__secondary {
       text-transform: uppercase;
-      letter-spacing: 20px;
-      margin-right: -20px;
+      letter-spacing: 25px;
+      margin-right: -25px;
+      color: $color-grey-dark;
     }
   }
 }
