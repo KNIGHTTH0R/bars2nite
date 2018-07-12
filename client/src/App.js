@@ -5,6 +5,7 @@ import * as actions from './store/actions';
 import Header from './components/Header';
 import Landing from './components/Landing';
 import SearchPage from './components/SearchPage';
+import Events from './components/Events';
 
 // testing purpose
 import axios from 'axios';
@@ -19,10 +20,11 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <div style={{ padding: '1rem' }}>
+          <div className="container">
             <Header />
             <Route path="/" exact component={Landing} />
             <Route path="/search" exact component={SearchPage} />
+            <Route path="/events" exact component={Events} />
           </div>
         </BrowserRouter>
       </div>

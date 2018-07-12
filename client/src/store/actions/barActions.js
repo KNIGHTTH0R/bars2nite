@@ -7,7 +7,7 @@ const yelpApiKey =
 export const onSearchBars = location => dispatch => {
   axios
     .get(
-      `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=nightlife&location=${location}`,
+      `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=nightlife&limit=21&location=${location}`,
       {
         headers: { Authorization: 'Bearer ' + yelpApiKey }
       }

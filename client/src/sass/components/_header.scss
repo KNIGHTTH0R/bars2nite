@@ -1,6 +1,8 @@
 .Header {
   position: relative;
   z-index: 200;
+  // overflow: hidden;
+
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -64,11 +66,19 @@
       height: 40px;
     }
 
+    .sidenav-icon {
+      i {
+        cursor: pointer;
+        font-size: 2rem;
+        margin-right: 5px;
+      }
+    }
+
     &__item {
       display: inline-block;
 
       &:not(:last-child) {
-        margin-right: 1rem;
+        margin-bottom: 10px;
       }
 
       & a {

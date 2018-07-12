@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../store/actions';
+import SideNav from './SideNav';
 
 export class Header extends Component {
   state = {
-    searchInput: ''
+    searchInput: '',
+    sideNavShow: false
   };
 
   inputChangeHandler = e => {
@@ -19,6 +21,13 @@ export class Header extends Component {
     }
   };
 
+  toggleSideNav = () => {
+    console.log(this.state.sideNavShow);
+    this.setState(prevState => {
+      return { sideNavShow: !prevState.sideNavShow };
+    });
+  };
+
   onSearchBars = () => {
     this.props.onSearchBars(this.state.searchInput);
     this.props.history.push('/search');
@@ -26,20 +35,6 @@ export class Header extends Component {
   };
 
   render() {
-    console.log('auth status: ' + this.props.auth);
-
-    const authLinks = (
-      <li className="navigation__item">
-        <a href="/api/logout">Logout</a>
-      </li>
-    );
-
-    const guestLinks = (
-      <li className="navigation__item">
-        <a href="/auth/google">Login with Google</a>
-      </li>
-    );
-
     return (
       <div className="Header">
         <nav className="navigation">
@@ -63,7 +58,22 @@ export class Header extends Component {
           </form>
 
           <ul className="navigation__list">
-            {this.props.auth ? authLinks : guestLinks}
+            <li className="sidenav-icon">
+              <i
+                onClick={this.toggleSideNav}
+                className="fa fa-bars"
+                aria-hidden="true"
+              />
+            </li>
+            <li
+              className="SideNav"
+              style={{
+                marginRight: this.state.sideNavShow ? '-150px' : '0',
+                opacity: this.state.sideNavShow ? 0 : 1
+              }}
+            >
+              <SideNav />
+            </li>
           </ul>
         </nav>
       </div>

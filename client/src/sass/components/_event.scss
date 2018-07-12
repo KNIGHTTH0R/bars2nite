@@ -1,0 +1,12 @@
+.Event {
+  padding: 1rem;
+  background-color: #f5f5f5;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
