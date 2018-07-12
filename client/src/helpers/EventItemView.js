@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import * as actions from '../store/actions';
 
 const EventItemView = props => {
+  let location = props.location.reduce((prev, current) =>
+    prev.concat(' ' + current)
+  );
+
   return (
     <div className="EventItem">
       <div className="EventItem__image-box">
@@ -16,12 +20,16 @@ const EventItemView = props => {
           </a>
         </h2>
         <hr />
-        <p>{props.location}</p>
+        <p>{location}</p>
       </div>
 
       <div className="EventItem__going">
         <p>{props.going}</p>
         <p>going</p>
+      </div>
+
+      <div className="EventItem__price">
+        <span>{props.price}</span>
       </div>
     </div>
   );

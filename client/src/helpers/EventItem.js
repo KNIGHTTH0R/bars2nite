@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import * as actions from '../store/actions';
 
 const EventItem = props => {
+  let location = props.location.reduce((prev, current) =>
+    prev.concat(' ' + current)
+  );
+
   let button;
   let rsvp;
   if (props.auth) {
@@ -32,7 +36,7 @@ const EventItem = props => {
           </a>
         </h2>
         <hr />
-        <p>{props.location}</p>
+        <p>{location}</p>
         <span>{button}</span>
       </div>
 
@@ -41,9 +45,9 @@ const EventItem = props => {
         <p>going</p>
       </div>
 
-      {/* <div className="EventItem__price">
+      <div className="EventItem__price">
         <span>{props.price}</span>
-      </div> */}
+      </div>
 
       {rsvp}
     </div>
