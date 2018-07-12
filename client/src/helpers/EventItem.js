@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../store/actions';
 
 const EventItem = props => {
   return (
@@ -12,7 +14,9 @@ const EventItem = props => {
         </h2>
         <hr />
         <p>{props.location}</p>
-        <button>Cancel RSVP</button>
+        <button type="button" onClick={() => props.onCancelReservation(props)}>
+          Cancel RSVP
+        </button>
       </div>
       <div className="EventItem__going">
         <p>{props.going}</p>
@@ -22,4 +26,7 @@ const EventItem = props => {
   );
 };
 
-export default EventItem;
+export default connect(
+  null,
+  actions
+)(EventItem);

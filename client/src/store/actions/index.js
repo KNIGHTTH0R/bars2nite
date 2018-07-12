@@ -4,5 +4,6 @@ export {
   onSearchBars,
   onReserveBar,
   onLoadUserReservedBars,
-  onLoadReservedBars
+  onLoadReservedBars,
+  onCancelReservation
 } from './barActions';

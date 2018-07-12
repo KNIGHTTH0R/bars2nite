@@ -60,3 +60,17 @@ export const onReserveBar = data => dispatch => {
     })
     .catch(err => console.log(err));
 };
+
+export const onCancelReservation = data => dispatch => {
+  console.log(data);
+  const barData = {
+    yelpId: data.yelpId
+  };
+
+  axios
+    .post('/api/cancel', barData)
+    .then(res => {
+      dispatch(onLoadUserReservedBars());
+    })
+    .catch(e => console.log(e));
+};

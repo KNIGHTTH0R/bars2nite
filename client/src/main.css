@@ -235,7 +235,7 @@
       transform: scale(1.5) translateX(10px);
       transition: all 0.3s; }
       .EventItem__image-box img:hover {
-        transform: scale(1.8) translateX(10px); }
+        transform: scale(1.65) translateX(10px); }
   .EventItem__details {
     margin-left: 1rem;
     font-weight: 300; }

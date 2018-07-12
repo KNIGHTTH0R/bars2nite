@@ -79,4 +79,32 @@ module.exports = app => {
       }
     });
   });
+
+  // @route   Post api/reserve
+  // @desc    Add a reservation
+  // access   Private
+  app.post('/api/cancel', (req, res) => {
+    const { yelpId } = req.body;
+    const _user = req.user.id;
+
+    Bar.findOne({ yelpId, guestlist: _user }).then(bar => {
+      if (bar) {
+        console.log(bar);
+        const index = bar.guestlist.indexOf(_user);
+        console.log('index ' + index);
+        bar.guestlist.splice(index, 1);
+        bar.numberGoing--;
+
+        try {
+          bar.save();
+          res.send('reservation canceled successfully');
+        } catch (err) {
+          console.log(err);
+          res.status(422).send(err);
+        }
+      } else {
+        res.status(404).send({ error: 'bar not found' });
+      }
+    });
+  });
 };
