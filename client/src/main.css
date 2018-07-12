@@ -8,14 +8,20 @@
 
 .Header {
   position: relative;
-  z-index: 200; }
+  z-index: 200;
+  padding: 0 7px; }
   .Header .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px; }
     .Header .navigation__header {
-      display: inline-block; }
+      display: inline-block;
+      display: flex;
+      align-items: center; }
+      .Header .navigation__header .glass-icon {
+        font-size: 1.5rem;
+        margin: 0 5px; }
       .Header .navigation__header a {
         text-decoration: none;
         font-family: 'Londrina Shadow', cursive;
@@ -72,7 +78,7 @@
   width: 100%;
   overflow: hidden; }
   .Landing .bg-video {
-    margin-top: 7rem;
+    margin-top: 95px;
     position: absolute;
     top: -30px;
     left: 0;
@@ -106,6 +112,11 @@
 .Event {
   padding: 1rem;
   background-color: #f5f5f5; }
+  .Event__heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #4e4e4e; }
   .Event__content {
     display: flex;
     flex-direction: column;
@@ -130,7 +141,8 @@
           margin-bottom: 10px; }
         .SideNav .side-nav .links-container__item a {
           padding: 5px 8px;
-          text-decoration: none; }
+          text-decoration: none;
+          font-weight: 300; }
           .SideNav .side-nav .links-container__item a:hover {
             background-color: #2e2d2d;
             color: #fff; }
@@ -253,6 +265,8 @@
         transition: all 0.3s; }
         .EventItem__details h2 a:hover {
           color: #db084e; }
+    .EventItem__details p {
+      color: #4e4e4e; }
     .EventItem__details button {
       cursor: pointer;
       display: inline-block;

@@ -27,7 +27,7 @@ export class Events extends Component {
 
     return (
       <div className="Event">
-        <h2>Events you rsvp'ed</h2>
+        <h2 className="Event__heading">Your Events</h2>
         <div className="Event__content">{eventContent}</div>
       </div>
     );

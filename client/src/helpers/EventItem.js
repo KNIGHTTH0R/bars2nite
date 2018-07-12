@@ -8,6 +8,7 @@ const EventItem = props => {
       <div className="EventItem__image-box">
         <img src={props.image} alt={props.name} />
       </div>
+
       <div className="EventItem__details">
         <h2>
           <a href={props.website}>{props.name}</a>
@@ -18,6 +19,7 @@ const EventItem = props => {
           Cancel RSVP
         </button>
       </div>
+
       <div className="EventItem__going">
         <p>{props.going}</p>
         <p>going</p>

@@ -1,7 +1,7 @@
 .Header {
   position: relative;
   z-index: 200;
-  // overflow: hidden;
+  padding: 0 7px;
 
   .navigation {
     display: flex;
@@ -11,6 +11,13 @@
 
     &__header {
       display: inline-block;
+      display: flex;
+      align-items: center;
+
+      .glass-icon {
+        font-size: 1.5rem;
+        margin: 0 5px;
+      }
 
       a {
         text-decoration: none;
