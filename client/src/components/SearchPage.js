@@ -11,6 +11,22 @@ export class SearchPage extends Component {
   };
 
   render() {
+    let loginErrorMsg;
+    if (this.props.loginError) {
+      loginErrorMsg = (
+        <p className="login-error-message">
+          <span>
+            <i
+              className="fa fa-exclamation-circle error-icon"
+              aria-hidden="true"
+            />
+            Error: You must <a href="/auth/google">login</a> to make
+            reservations!
+          </span>
+        </p>
+      );
+    }
+
     let userBarIds;
     let userBars = this.props.userBars;
     userBarIds = userBars ? userBars.map(bar => bar.yelpId) : [];
@@ -71,13 +87,17 @@ export class SearchPage extends Component {
     let searchContent;
 
     if (this.props.loading) {
-      searchContent = <div class="loader">Loading...</div>;
+      searchContent = <div className="loader">Loading...</div>;
     } else {
       searchContent = searchedBars;
     }
 
-    // console.log(this.props.bars);
-    return <div className="SearchPage">{searchContent}</div>;
+    return (
+      <div>
+        {loginErrorMsg}
+        <div className="SearchPage">{searchContent}</div>
+      </div>
+    );
   }
 }
 
@@ -87,7 +107,8 @@ const mapStateToProps = state => {
     bars: state.bars.searchedBars,
     reservedBars: state.bars.reservedBars,
     userBars: state.bars.userBars,
-    loading: state.bars.loading
+    loading: state.bars.loading,
+    loginError: state.bars.loginError
   };
 };
 

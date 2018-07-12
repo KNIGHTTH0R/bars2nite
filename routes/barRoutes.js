@@ -29,9 +29,6 @@ module.exports = app => {
   app.post('/api/reserve', requiredLogin, (req, res) => {
     const { name, yelpId, image, price, location, website } = req.body;
     const _user = req.user.id;
-    console.log(name, yelpId, image, price, location, website);
-
-    console.log(_user);
 
     Bar.findOne({
       yelpId
@@ -89,9 +86,7 @@ module.exports = app => {
 
     Bar.findOne({ yelpId, guestlist: _user }).then(bar => {
       if (bar) {
-        console.log(bar);
         const index = bar.guestlist.indexOf(_user);
-        console.log('index ' + index);
         bar.guestlist.splice(index, 1);
         bar.numberGoing--;
 

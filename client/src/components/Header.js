@@ -22,7 +22,6 @@ export class Header extends Component {
   };
 
   toggleSideNav = () => {
-    console.log(this.state.sideNavShow);
     this.setState(prevState => {
       return { sideNavShow: !prevState.sideNavShow };
     });
@@ -66,6 +65,7 @@ export class Header extends Component {
                 aria-hidden="true"
               />
             </li>
+
             <li
               className="SideNav"
               style={{

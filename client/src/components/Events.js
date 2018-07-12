@@ -28,7 +28,7 @@ export class Events extends Component {
 
     let content;
     if (this.props.loading) {
-      content = <div class="loader">Loading...</div>;
+      content = <div className="loader">Loading...</div>;
     } else {
       content = (
         <div>

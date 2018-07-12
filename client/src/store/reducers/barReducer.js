@@ -4,7 +4,8 @@ const initialState = {
   searchedBars: null,
   reservedBars: null,
   userBars: null,
-  loading: false
+  loading: false,
+  loginError: false
 };
 
 export default function(state = initialState, action) {
@@ -13,24 +14,33 @@ export default function(state = initialState, action) {
       return {
         ...state,
         searchedBars: action.payload,
-        loading: false
+        loading: false,
+        loginError: false
       };
     case actionTypes.LOAD_RESERVED_BARS:
       return {
         ...state,
         reservedBars: action.payload,
-        loading: false
+        loading: false,
+        loginError: false
       };
     case actionTypes.LOAD_USER_RESERVED_BARS:
       return {
         ...state,
         userBars: action.payload,
-        loading: false
+        loading: false,
+        loginError: false
       };
     case actionTypes.LOADING_STARTS:
       return {
         ...state,
-        loading: true
+        loading: true,
+        loginError: false
+      };
+    case actionTypes.LOGIN_ERROR:
+      return {
+        ...state,
+        loginError: true
       };
     default:
       return state;

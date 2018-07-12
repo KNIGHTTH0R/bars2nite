@@ -22,7 +22,9 @@ const SearchItem = props => {
 
       <button
         className="SearchItem__going rsvp"
-        onClick={() => props.onReserveBar(props)}
+        onClick={
+          props.auth ? () => props.onReserveBar(props) : props.onLoginError
+        }
       >
         <span className="SearchItem__going--visible">RSPV</span>
         <span className="SearchItem__going--invisible">
@@ -33,7 +35,13 @@ const SearchItem = props => {
   );
 };
 
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(SearchItem);

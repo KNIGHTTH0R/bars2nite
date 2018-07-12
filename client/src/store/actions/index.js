@@ -5,5 +5,6 @@ export {
   onReserveBar,
   onLoadUserReservedBars,
   onLoadReservedBars,
-  onCancelReservation
+  onCancelReservation,
+  onLoginError
 } from './barActions';

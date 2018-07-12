@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const SideNav = props => {
   const authLinks = (
-    <div className="links-container">
+    <ul className="links-container">
       <li className="links-container__item">
         <Link to="/events">Your RSVP</Link>
       </li>
@@ -14,18 +14,18 @@ const SideNav = props => {
       <li className="links-container__item">
         <a href="/api/logout">Logout</a>
       </li>
-    </div>
+    </ul>
   );
 
   const guestLinks = (
-    <div className="links-container">
+    <ul className="links-container">
       <li className="links-container__item">
         <Link to="/all-events">All Events</Link>
       </li>
       <li className="links-container__item">
         <a href="/auth/google">Login</a>
       </li>
-    </div>
+    </ul>
   );
 
   return <div className="side-nav">{props.auth ? authLinks : guestLinks}</div>;

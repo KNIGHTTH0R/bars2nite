@@ -16,13 +16,12 @@ export class AllEvents extends Component {
     let userBars = this.props.userBars;
     userBarIds = userBars ? userBars.map(bar => bar.yelpId) : [];
 
-    console.log(userBarIds);
-
     if (this.props.reservedBars) {
       eventContent = this.props.reservedBars.map(bar => {
         if (userBarIds.includes(bar.yelpId)) {
           return (
             <EventItem
+              key={bar.yelpId}
               name={bar.name}
               going={bar.numberGoing}
               image={bar.image}
@@ -35,6 +34,7 @@ export class AllEvents extends Component {
         } else {
           return (
             <EventItemView
+              key={bar.yelpId}
               name={bar.name}
               going={bar.numberGoing}
               image={bar.image}
@@ -50,7 +50,7 @@ export class AllEvents extends Component {
 
     let content;
     if (this.props.loading) {
-      content = <div class="loader">Loading...</div>;
+      content = <div className="loader">Loading...</div>;
     } else {
       content = (
         <div>

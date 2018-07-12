@@ -63,8 +63,6 @@ export const onReserveBar = data => dispatch => {
     website: data.website
   };
 
-  console.log(barData);
-
   axios
     .post('/api/reserve', barData)
     .then(res => {
@@ -74,7 +72,6 @@ export const onReserveBar = data => dispatch => {
 };
 
 export const onCancelReservation = data => dispatch => {
-  console.log(data);
   const barData = {
     yelpId: data.yelpId
   };
@@ -86,4 +83,8 @@ export const onCancelReservation = data => dispatch => {
       dispatch(onLoadReservedBars());
     })
     .catch(e => console.log(e));
+};
+
+export const onLoginError = () => dispatch => {
+  dispatch({ type: actionTypes.LOGIN_ERROR });
 };
