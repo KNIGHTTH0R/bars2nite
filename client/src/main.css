@@ -188,7 +188,21 @@
     .SearchItem__details-box img {
       width: 100%;
       overflow: hidden;
-      border-radius: 3px; }
+      border-radius: 3px;
+      transform: scale(1.2) translateY(13%); }
+  .SearchItem__location {
+    font-weight: 300;
+    padding: 0 3px;
+    color: #4e4e4e; }
+  .SearchItem__yelp-link {
+    color: red;
+    display: block;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: color 0.2s; }
+    .SearchItem__yelp-link:hover {
+      color: #dd0000; }
   .SearchItem__going {
     display: block;
     width: 100%;

@@ -69,8 +69,8 @@ export class Header extends Component {
             <li
               className="SideNav"
               style={{
-                marginRight: this.state.sideNavShow ? '-150px' : '0',
-                opacity: this.state.sideNavShow ? 0 : 1
+                marginRight: this.state.sideNavShow ? '0' : '-150px',
+                opacity: this.state.sideNavShow ? 1 : 0
               }}
             >
               <SideNav />

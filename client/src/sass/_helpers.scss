@@ -46,7 +46,26 @@
       width: 100%;
       overflow: hidden;
       border-radius: 3px;
-      //   transform: scale(1.2);
+      transform: scale(1.2) translateY(13%);
+    }
+  }
+
+  &__location {
+    font-weight: 300;
+    padding: 0 3px;
+    color: $color-grey-dark;
+  }
+
+  &__yelp-link {
+    color: red;
+    display: block;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #dd0000;
     }
   }
 
