@@ -38,6 +38,11 @@
       animation: moveInLeft;
       animation-duration: 1s;
       animation-timing-function: ease-out;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     &__secondary {
@@ -48,6 +53,12 @@
       animation: moveInRight;
       animation-duration: 1s;
       animation-timing-function: ease-out;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #fff;
+        text-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.65);
+      }
     }
   }
 }
