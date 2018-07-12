@@ -18,7 +18,7 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: keys.callbackUrl
+      callbackURL: 'https://nightlife-28.herokuapp.com/auth/google/callback'
       // proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
