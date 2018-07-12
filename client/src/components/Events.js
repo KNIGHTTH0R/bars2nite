@@ -20,6 +20,7 @@ export class Events extends Component {
             yelpId={bar.yelpId}
             location={bar.location}
             website={bar.website}
+            price={bar.price}
           />
         );
       });

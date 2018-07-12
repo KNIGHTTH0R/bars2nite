@@ -35,6 +35,9 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      animation: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
     }
 
     &__secondary {
@@ -42,6 +45,9 @@
       letter-spacing: 25px;
       margin-right: -25px;
       color: $color-grey-dark;
+      animation: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
     }
   }
 }

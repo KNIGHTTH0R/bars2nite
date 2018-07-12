@@ -41,6 +41,10 @@ const EventItem = props => {
         <p>going</p>
       </div>
 
+      {/* <div className="EventItem__price">
+        <span>{props.price}</span>
+      </div> */}
+
       {rsvp}
     </div>
   );
