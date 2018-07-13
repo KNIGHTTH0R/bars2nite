@@ -38,8 +38,10 @@ export class Header extends Component {
       <div className="Header">
         <nav className="navigation">
           <span className="navigation__header">
-            <i className="fa fa-glass glass-icon" aria-hidden="true" />
-            <Link to="/">Bars2Nite</Link>
+            <Link to="/">
+              <i className="fa fa-glass glass-icon--1" aria-hidden="true" />
+              <i className="fa fa-glass glass-icon--2" aria-hidden="true" />
+            </Link>
           </span>
           <form action="#" className="search">
             <input

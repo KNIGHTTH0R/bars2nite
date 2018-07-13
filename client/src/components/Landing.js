@@ -22,7 +22,11 @@ export class Landing extends Component {
         </div>
 
         <div className="header-box">
-          <h2 className="header-box__primary">Bars2Nite</h2>
+          <h2 className="header-box__primary">
+            <i className="fa fa-glass glass-icon--1" aria-hidden="true" />
+            <i className="fa fa-glass glass-icon--2" aria-hidden="true" />
+            <span>Bars2Nite</span>
+          </h2>
           <p className="header-box__secondary">rspv now</p>
         </div>
       </div>

@@ -10,17 +10,27 @@
     height: 60px;
 
     &__header {
-      display: inline-block;
       display: flex;
       align-items: center;
 
       .glass-icon {
-        font-size: 1.5rem;
-        margin: 0 5px;
-        color: $color-primary-dark;
-
         @media only screen and (max-width: 700px) {
           font-size: 1.2rem;
+        }
+
+        &--1 {
+          font-size: 1.5rem;
+          margin: 0 5px;
+          transform: rotate(15deg);
+        }
+
+        &--2 {
+          font-size: 2rem;
+          transform: rotate(-15deg);
+
+          @media only screen and (max-width: 500px) {
+            display: none;
+          }
         }
       }
 
@@ -29,6 +39,11 @@
         font-family: 'Londrina Shadow', cursive;
         font-size: 2.6rem;
         color: $color-primary-dark;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $color-primary;
+        }
 
         @media only screen and (max-width: 700px) {
           font-size: 2rem;
@@ -40,29 +55,40 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 250px;
 
       &__input {
         background-color: #f4f2f2;
         font-family: inherit;
         font-size: 0.7rem;
         font-weight: 300;
-        width: 0;
+        width: 35%;
         border: none;
         padding: 0.7rem 1.8rem;
         border-radius: 100px;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.3s ease-in-out;
         margin-right: -1.5rem;
+
+        &::placeholder {
+          opacity: 0;
+        }
 
         &:focus {
           width: 100%;
-          background-color: #f0eeee;
+          background-color: #e6e6e6;
           outline: none;
+
+          &::placeholder {
+            opacity: 1;
+            text-align: center;
+          }
         }
       }
 
       &__icon {
         cursor: pointer;
         transition: all 0.2s;
+        color: $color-grey-dark;
 
         &:hover {
           transform: rotate(30deg);
