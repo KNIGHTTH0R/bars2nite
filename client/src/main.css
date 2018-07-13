@@ -47,10 +47,12 @@
       .Header .navigation__header .glass-icon--1 {
         font-size: 1.5rem;
         margin: 0 5px;
-        transform: rotate(15deg); }
+        transform: rotate(15deg);
+        transition: all 0.3s; }
       .Header .navigation__header .glass-icon--2 {
         font-size: 2rem;
-        transform: rotate(-15deg); }
+        transform: rotate(-15deg);
+        transition: all 0.3s; }
         @media only screen and (max-width: 500px) {
           .Header .navigation__header .glass-icon--2 {
             display: none; } }
@@ -59,9 +61,13 @@
         font-family: 'Londrina Shadow', cursive;
         font-size: 2.6rem;
         color: #bc4e9c;
-        transition: color 0.3s; }
+        transition: all 0.2s; }
         .Header .navigation__header a:hover {
           color: #db084e; }
+        .Header .navigation__header a:hover :first-child {
+          transform: rotate(35deg); }
+        .Header .navigation__header a:hover :last-child {
+          transform: rotate(-35deg); }
         @media only screen and (max-width: 700px) {
           .Header .navigation__header a {
             font-size: 2rem; } }
@@ -159,6 +165,9 @@
         background-image: inherit;
         -webkit-background-clip: text;
         background-clip: text; }
+        @media only screen and (max-width: 600px) {
+          .Landing .header-box__primary span {
+            font-size: 3.8rem; } }
       .Landing .header-box__primary .glass-icon {
         color: inherit;
         background-image: inherit;
@@ -172,7 +181,11 @@
           color: inherit;
           background-image: inherit;
           -webkit-background-clip: text;
-          background-clip: text; }
+          background-clip: text;
+          transition: transform 0.3s; }
+          @media only screen and (max-width: 600px) {
+            .Landing .header-box__primary .glass-icon--1 {
+              font-size: 1.2em; } }
         .Landing .header-box__primary .glass-icon--2 {
           font-size: 2.6rem;
           color: inherit;
@@ -180,9 +193,15 @@
           -webkit-background-clip: text;
           background-clip: text;
           transform: rotate(-15deg);
-          margin-right: 5px; }
-      .Landing .header-box__primary:hover {
-        transform: scale(1.1); }
+          margin-right: 5px;
+          transition: transform 0.3s; }
+          @media only screen and (max-width: 600px) {
+            .Landing .header-box__primary .glass-icon--2 {
+              font-size: 2.4rem; } }
+      .Landing .header-box__primary:hover :first-child {
+        transform: rotate(35deg); }
+      .Landing .header-box__primary:hover :nth-child(2) {
+        transform: rotate(-35deg); }
     .Landing .header-box__secondary {
       text-transform: uppercase;
       letter-spacing: 25px;
@@ -195,6 +214,9 @@
       .Landing .header-box__secondary:hover {
         color: #fff;
         text-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.65); }
+      @media only screen and (max-width: 600px) {
+        .Landing .header-box__secondary {
+          font-size: 0.8rem; } }
 
 .login-error-message {
   margin: 20px 30px;
@@ -226,9 +248,10 @@
   background-color: #f5f5f5; }
   .Event__heading {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 300;
-    color: #4e4e4e; }
+    color: #4e4e4e;
+    font-family: 'Rum Raisin', sans-serif; }
     @media only screen and (max-width: 700px) {
       .Event__heading {
         font-size: 2rem; } }
