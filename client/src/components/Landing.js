@@ -29,6 +29,12 @@ export class Landing extends Component {
           </h2>
           <p className="header-box__secondary">rspv now</p>
         </div>
+
+        <div className="github-link">
+          <a href="https://github.com/c-clin/bars2nite">
+            <i className="fa fa-github-alt" aria-hidden="true" />
+          </a>
+        </div>
       </div>
     );
   }

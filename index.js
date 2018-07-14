@@ -11,7 +11,10 @@ require('./services/passport');
 
 // ----------- db --------------
 mongoose
-  .connect(keys.mongoURI)
+  .connect(
+    keys.mongoURI,
+    { useNewUrlParser: true }
+  )
   .then(() => console.log('MongoDB connected'))
   .catch(error => console.log(error));
 

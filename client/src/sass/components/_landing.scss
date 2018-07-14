@@ -120,4 +120,20 @@
       }
     }
   }
+
+  .github-link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    font-size: 1.5rem;
+
+    a {
+      transition: color 0.2s;
+
+      &:hover {
+        color: $color-primary-dark;
+      }
+    }
+  }
 }

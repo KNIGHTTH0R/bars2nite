@@ -221,6 +221,16 @@
       @media only screen and (max-width: 600px) {
         .Landing .header-box__secondary {
           font-size: 0.8rem; } }
+  .Landing .github-link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    font-size: 1.5rem; }
+    .Landing .github-link a {
+      transition: color 0.2s; }
+      .Landing .github-link a:hover {
+        color: #bc4e9c; }
 
 .login-error-message {
   margin: 20px 30px;
