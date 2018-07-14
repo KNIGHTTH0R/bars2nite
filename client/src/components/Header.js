@@ -28,9 +28,11 @@ export class Header extends Component {
   };
 
   onSearchBars = () => {
-    this.props.onSearchBars(this.state.searchInput);
-    this.props.history.push('/search');
-    this.setState({ searchInput: '' });
+    if (this.state.searchInput !== '') {
+      this.props.onSearchBars(this.state.searchInput);
+      this.props.history.push('/search');
+      this.setState({ searchInput: '' });
+    }
   };
 
   render() {
