@@ -27,7 +27,9 @@ export class Landing extends Component {
             <i className="fa fa-glass glass-icon--2" aria-hidden="true" />
             <span>Bars2Nite</span>
           </h2>
-          <p className="header-box__secondary">rspv now</p>
+          <a href="/auth/google" className="header-box__secondary">
+            rspv now
+          </a>
         </div>
 
         <div className="github-link">

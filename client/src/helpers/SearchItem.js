@@ -7,13 +7,19 @@ const SearchItem = props => {
     prev.concat(' ' + current)
   );
 
+  let price;
+  props.price
+    ? (price = <p className="SearchItem__price">{props.price}</p>)
+    : (price = 0);
+
   return (
     <div className="SearchItem">
       <div className="SearchItem__details-box">
         <img src={props.img} alt="img" width="300" />
         <h2 className="SearchItem__name">{props.name}</h2>
       </div>
-      <p className="SearchItem__price">{props.price}</p>
+
+      {price}
 
       <p className="SearchItem__location">{location}</p>
       <a href={props.website} className="SearchItem__yelp-link">

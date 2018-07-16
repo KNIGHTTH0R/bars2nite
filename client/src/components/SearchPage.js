@@ -25,6 +25,11 @@ export class SearchPage extends Component {
           </span>
         </p>
       );
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
 
     let userBarIds;
