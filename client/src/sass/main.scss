@@ -16,6 +16,8 @@
 body {
   margin: 0;
   padding: 0;
+  animation: pulse 5s infinite;
+  animation-timing-function: linear;
   background-image: linear-gradient(
     to right bottom,
     ($color-primary-light),

@@ -8,13 +8,19 @@ import SearchPage from './components/SearchPage';
 import Events from './components/Events';
 import AllEvents from './components/AllEvents';
 
-// testing purpose
-import axios from 'axios';
-window.axios = axios;
-
 class App extends Component {
   componentDidMount = () => {
     this.props.fetchUser();
+
+    let preloader = document.getElementById('pre-loader');
+    if (preloader) {
+      preloader.classList.add('fade-out');
+
+      setTimeout(() => {
+        preloader.innerHTML = '';
+        document.querySelector('.App').classList.add('visible');
+      }, 1000);
+    }
   };
 
   render() {

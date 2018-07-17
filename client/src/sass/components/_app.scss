@@ -1,4 +1,5 @@
 .App {
+  opacity: 0;
   max-width: 1000px;
   margin: 3rem auto;
   background-color: #faf9f9;
@@ -10,4 +11,15 @@
   @media only screen and (max-width: 1000px) {
     margin: 0;
   }
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+// pre-loader fadeout
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s;
 }
