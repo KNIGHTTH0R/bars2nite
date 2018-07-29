@@ -61,13 +61,9 @@ export class Header extends Component {
             />
           </form>
 
-          <ul className="navigation__list">
+          <ul className="navigation__list" onClick={this.toggleSideNav}>
             <li className="sidenav-icon">
-              <i
-                onClick={this.toggleSideNav}
-                className="fa fa-bars"
-                aria-hidden="true"
-              />
+              <span className="sidenav-icon--line" />
             </li>
 
             <li

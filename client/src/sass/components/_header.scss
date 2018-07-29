@@ -114,19 +114,60 @@
     &__list {
       list-style: none;
       padding: 0;
+      padding-right: 7px;
       margin: 0;
-      //   background-color: #b6b6b6;
       display: flex;
       align-items: center;
-
       height: 40px;
+
+      &:hover {
+        cursor: pointer;
+
+        > .sidenav-icon > .sidenav-icon--line {
+          background-color: transparent;
+
+          &::before {
+            top: 0;
+            transform: rotate(135deg);
+            background-color: $color-primary;
+          }
+
+          &::after {
+            top: 0;
+            transform: rotate(-135deg);
+            background-color: $color-primary;
+          }
+        }
+      }
     }
 
     .sidenav-icon {
-      i {
-        cursor: pointer;
-        font-size: 2rem;
-        margin-right: 5px;
+      &--line {
+        width: 2.4rem;
+        height: 2px;
+        // background-color: #333;
+        background-color: $color-primary-dark;
+        display: inline-block;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 2.4rem;
+          height: 2px;
+          // background-color: #333;
+          background-color: $color-primary-dark;
+          transition: all 0.2s;
+        }
+
+        &::before {
+          top: -0.8rem;
+        }
+
+        &::after {
+          top: 0.8rem;
+        }
       }
     }
 

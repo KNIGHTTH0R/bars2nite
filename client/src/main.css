@@ -119,14 +119,40 @@
     .Header .navigation__list {
       list-style: none;
       padding: 0;
+      padding-right: 7px;
       margin: 0;
       display: flex;
       align-items: center;
       height: 40px; }
-    .Header .navigation .sidenav-icon i {
-      cursor: pointer;
-      font-size: 2rem;
-      margin-right: 5px; }
+      .Header .navigation__list:hover {
+        cursor: pointer; }
+        .Header .navigation__list:hover > .sidenav-icon > .sidenav-icon--line {
+          background-color: transparent; }
+          .Header .navigation__list:hover > .sidenav-icon > .sidenav-icon--line::before {
+            top: 0;
+            transform: rotate(135deg);
+            background-color: #db084e; }
+          .Header .navigation__list:hover > .sidenav-icon > .sidenav-icon--line::after {
+            top: 0;
+            transform: rotate(-135deg);
+            background-color: #db084e; }
+    .Header .navigation .sidenav-icon--line {
+      width: 2.4rem;
+      height: 2px;
+      background-color: #bc4e9c;
+      display: inline-block;
+      position: relative; }
+      .Header .navigation .sidenav-icon--line::before, .Header .navigation .sidenav-icon--line::after {
+        content: '';
+        position: absolute;
+        width: 2.4rem;
+        height: 2px;
+        background-color: #bc4e9c;
+        transition: all 0.2s; }
+      .Header .navigation .sidenav-icon--line::before {
+        top: -0.8rem; }
+      .Header .navigation .sidenav-icon--line::after {
+        top: 0.8rem; }
     .Header .navigation__item {
       display: inline-block; }
       .Header .navigation__item:not(:last-child) {
@@ -314,11 +340,31 @@
           padding: 5px 8px;
           text-decoration: none;
           font-weight: 300;
-          transition: all 0.3s;
-          color: #db084e; }
-          .SideNav .side-nav .links-container__item a:hover {
+          transition: all 0.5s;
+          color: #db084e;
+          position: relative;
+          z-index: 1; }
+          .SideNav .side-nav .links-container__item a::after {
+            content: '.';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            height: 1px;
+            color: transparent;
             background-color: #db084e;
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.5s; }
+          .SideNav .side-nav .links-container__item a:hover {
             color: #fff; }
+            .SideNav .side-nav .links-container__item a:hover::after {
+              height: 100%;
+              opacity: 1; }
 
 .SearchItem {
   margin: 1rem 0.5rem;
