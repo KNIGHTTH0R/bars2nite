@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from '../store/actions';
 
 import mp4Video from '../assets/video.mp4';
@@ -11,6 +12,21 @@ export class Landing extends Component {
   };
 
   render() {
+    let secondaryHeader;
+    if (this.props.auth) {
+      secondaryHeader = (
+        <Link to="all-events" className="header-box__secondary">
+          rspv now
+        </Link>
+      );
+    } else {
+      secondaryHeader = (
+        <a href="/auth/google" className="header-box__secondary">
+          rsvp now
+        </a>
+      );
+    }
+
     return (
       <div className="Landing">
         <div className="bg-video">
@@ -27,9 +43,7 @@ export class Landing extends Component {
             <i className="fa fa-glass glass-icon--2" aria-hidden="true" />
             <span>Bars2Nite</span>
           </h2>
-          <a href="/auth/google" className="header-box__secondary">
-            rspv now
-          </a>
+          {secondaryHeader}
         </div>
 
         <div className="github-link">
@@ -42,7 +56,13 @@ export class Landing extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(Landing);
