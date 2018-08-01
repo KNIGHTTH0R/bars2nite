@@ -32,7 +32,7 @@ const SearchItem = props => {
           props.auth ? () => props.onReserveBar(props) : props.onLoginError
         }
       >
-        <span className="SearchItem__going--visible">RSPV</span>
+        <span className="SearchItem__going--visible">RSVP</span>
         <span className="SearchItem__going--invisible">
           Going: {props.going}
         </span>

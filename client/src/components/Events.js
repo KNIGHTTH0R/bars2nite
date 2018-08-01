@@ -14,6 +14,7 @@ export class Events extends Component {
       eventContent = this.props.userBars.map(bar => {
         return (
           <EventItem
+            key={bar.name}
             name={bar.name}
             going={bar.numberGoing}
             image={bar.image}
