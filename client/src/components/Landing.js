@@ -16,7 +16,7 @@ export class Landing extends Component {
     if (this.props.auth) {
       secondaryHeader = (
         <Link to="all-events" className="header-box__secondary">
-          rsvp now
+          rspv now
         </Link>
       );
     } else {
