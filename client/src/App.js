@@ -8,7 +8,7 @@ import SearchPage from './components/SearchPage';
 import Events from './components/Events';
 import AllEvents from './components/AllEvents';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount = () => {
     this.props.fetchUser();
 
