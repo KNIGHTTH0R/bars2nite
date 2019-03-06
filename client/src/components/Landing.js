@@ -13,19 +13,14 @@ export class Landing extends Component {
 
   render() {
     let secondaryHeader;
-    if (this.props.auth) {
-      secondaryHeader = (
-        <Link to="all-events" className="header-box__secondary">
-          rspv now
-        </Link>
-      );
-    } else {
-      secondaryHeader = (
-        <a href="/auth/google" className="header-box__secondary">
-          rsvp now
-        </a>
-      );
-    }
+    secondaryHeader = (
+      <Link
+        to={this.props.auth ? 'all-events' : '/auth/google'}
+        className="header-box__secondary"
+      >
+        rspv now
+      </Link>
+    );
 
     return (
       <div className="Landing">
