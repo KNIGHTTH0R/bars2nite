@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SearchItem from '../helpers/SearchItem';
 import ReservedItem from '../helpers/ReservedItem';
-import * as actions from '../store/actions';
+import { onLoadReservedBars, onLoadUserReservedBars } from '../store/actions';
 
 export class SearchPage extends Component {
   componentDidMount = () => {
@@ -119,5 +119,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  actions
+  { onLoadReservedBars, onLoadUserReservedBars }
 )(SearchPage);

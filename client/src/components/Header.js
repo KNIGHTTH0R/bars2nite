@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as actions from '../store/actions';
+import { onSearchBars } from '../store/actions';
 import SideNav from './SideNav';
 
 export class Header extends Component {
@@ -90,5 +90,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  actions
+  { onSearchBars }
 )(withRouter(Header));

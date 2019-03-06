@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../store/actions';
+import { onLoadUserReservedBars } from '../store/actions';
 import EventItem from '../helpers/EventItem';
 
 export class Events extends Component {
@@ -52,5 +52,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  actions
+  { onLoadUserReservedBars }
 )(Events);

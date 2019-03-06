@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import * as actions from '../store/actions';
+import { onLoadReservedBars } from '../store/actions';
 
 import mp4Video from '../assets/video.mp4';
 import webmVideo from '../assets/video.webm';
@@ -64,5 +64,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  actions
+  { onLoadReservedBars }
 )(Landing);
