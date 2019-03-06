@@ -14,5 +14,7 @@ This is an app that allows users to search for bars in their area and make reser
 - Redux
 - Mongoose
 - SASS
+- Jest
+- Enzyme
 
 ### Website Link: [https://nightlife-28.herokuapp.com/]
