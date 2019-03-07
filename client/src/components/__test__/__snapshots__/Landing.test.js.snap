@@ -1,0 +1,627 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Landing
+    onLoadReservedBars={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="bg-video"
+>
+          <video
+                    autoPlay={true}
+                    className="bg-video__content"
+                    loop={true}
+          >
+                    <source
+                              src="video.mp4"
+                              type="video/mp4"
+                    />
+                    <source
+                              src="video.webm"
+                              type="video/webm"
+                    />
+                     Your browser is not supported!
+          </video>
+</div>,
+        <div
+          className="header-box"
+>
+          <h2
+                    className="header-box__primary"
+          >
+                    <i
+                              aria-hidden="true"
+                              className="fa fa-glass glass-icon--1"
+                    />
+                    <i
+                              aria-hidden="true"
+                              className="fa fa-glass glass-icon--2"
+                    />
+                    <span>
+                              Bars2Nite
+                    </span>
+          </h2>
+          <Link
+                    className="header-box__secondary"
+                    replace={false}
+                    to="/auth/google"
+          >
+                    rspv now
+          </Link>
+</div>,
+        <div
+          className="github-link"
+>
+          <a
+                    href="https://github.com/c-clin/bars2nite"
+          >
+                    <i
+                              aria-hidden="true"
+                              className="fa fa-github-alt"
+                    />
+          </a>
+</div>,
+      ],
+      "className": "Landing",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <video
+            autoPlay={true}
+            className="bg-video__content"
+            loop={true}
+>
+            <source
+                        src="video.mp4"
+                        type="video/mp4"
+            />
+            <source
+                        src="video.webm"
+                        type="video/webm"
+            />
+             Your browser is not supported!
+</video>,
+          "className": "bg-video",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "autoPlay": true,
+            "children": Array [
+              <source
+                src="video.mp4"
+                type="video/mp4"
+/>,
+              <source
+                src="video.webm"
+                type="video/webm"
+/>,
+              " Your browser is not supported!",
+            ],
+            "className": "bg-video__content",
+            "loop": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "src": "video.mp4",
+                "type": "video/mp4",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "source",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "src": "video.webm",
+                "type": "video/webm",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "source",
+            },
+            " Your browser is not supported!",
+          ],
+          "type": "video",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="header-box__primary"
+>
+              <i
+                            aria-hidden="true"
+                            className="fa fa-glass glass-icon--1"
+              />
+              <i
+                            aria-hidden="true"
+                            className="fa fa-glass glass-icon--2"
+              />
+              <span>
+                            Bars2Nite
+              </span>
+</h2>,
+            <Link
+              className="header-box__secondary"
+              replace={false}
+              to="/auth/google"
+>
+              rspv now
+</Link>,
+          ],
+          "className": "header-box",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  aria-hidden="true"
+                  className="fa fa-glass glass-icon--1"
+/>,
+                <i
+                  aria-hidden="true"
+                  className="fa fa-glass glass-icon--2"
+/>,
+                <span>
+                  Bars2Nite
+</span>,
+              ],
+              "className": "header-box__primary",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "fa fa-glass glass-icon--1",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "fa fa-glass glass-icon--2",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Bars2Nite",
+                },
+                "ref": null,
+                "rendered": "Bars2Nite",
+                "type": "span",
+              },
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "rspv now",
+              "className": "header-box__secondary",
+              "replace": false,
+              "to": "/auth/google",
+            },
+            "ref": null,
+            "rendered": "rspv now",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <a
+            href="https://github.com/c-clin/bars2nite"
+>
+            <i
+                        aria-hidden="true"
+                        className="fa fa-github-alt"
+            />
+</a>,
+          "className": "github-link",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <i
+              aria-hidden="true"
+              className="fa fa-github-alt"
+/>,
+            "href": "https://github.com/c-clin/bars2nite",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-hidden": "true",
+              "className": "fa fa-github-alt",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "type": "a",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="bg-video"
+>
+            <video
+                        autoPlay={true}
+                        className="bg-video__content"
+                        loop={true}
+            >
+                        <source
+                                    src="video.mp4"
+                                    type="video/mp4"
+                        />
+                        <source
+                                    src="video.webm"
+                                    type="video/webm"
+                        />
+                         Your browser is not supported!
+            </video>
+</div>,
+          <div
+            className="header-box"
+>
+            <h2
+                        className="header-box__primary"
+            >
+                        <i
+                                    aria-hidden="true"
+                                    className="fa fa-glass glass-icon--1"
+                        />
+                        <i
+                                    aria-hidden="true"
+                                    className="fa fa-glass glass-icon--2"
+                        />
+                        <span>
+                                    Bars2Nite
+                        </span>
+            </h2>
+            <Link
+                        className="header-box__secondary"
+                        replace={false}
+                        to="/auth/google"
+            >
+                        rspv now
+            </Link>
+</div>,
+          <div
+            className="github-link"
+>
+            <a
+                        href="https://github.com/c-clin/bars2nite"
+            >
+                        <i
+                                    aria-hidden="true"
+                                    className="fa fa-github-alt"
+                        />
+            </a>
+</div>,
+        ],
+        "className": "Landing",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <video
+              autoPlay={true}
+              className="bg-video__content"
+              loop={true}
+>
+              <source
+                            src="video.mp4"
+                            type="video/mp4"
+              />
+              <source
+                            src="video.webm"
+                            type="video/webm"
+              />
+               Your browser is not supported!
+</video>,
+            "className": "bg-video",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "autoPlay": true,
+              "children": Array [
+                <source
+                  src="video.mp4"
+                  type="video/mp4"
+/>,
+                <source
+                  src="video.webm"
+                  type="video/webm"
+/>,
+                " Your browser is not supported!",
+              ],
+              "className": "bg-video__content",
+              "loop": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "src": "video.mp4",
+                  "type": "video/mp4",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "source",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "src": "video.webm",
+                  "type": "video/webm",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "source",
+              },
+              " Your browser is not supported!",
+            ],
+            "type": "video",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="header-box__primary"
+>
+                <i
+                                aria-hidden="true"
+                                className="fa fa-glass glass-icon--1"
+                />
+                <i
+                                aria-hidden="true"
+                                className="fa fa-glass glass-icon--2"
+                />
+                <span>
+                                Bars2Nite
+                </span>
+</h2>,
+              <Link
+                className="header-box__secondary"
+                replace={false}
+                to="/auth/google"
+>
+                rspv now
+</Link>,
+            ],
+            "className": "header-box",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    aria-hidden="true"
+                    className="fa fa-glass glass-icon--1"
+/>,
+                  <i
+                    aria-hidden="true"
+                    className="fa fa-glass glass-icon--2"
+/>,
+                  <span>
+                    Bars2Nite
+</span>,
+                ],
+                "className": "header-box__primary",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "fa fa-glass glass-icon--1",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "fa fa-glass glass-icon--2",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Bars2Nite",
+                  },
+                  "ref": null,
+                  "rendered": "Bars2Nite",
+                  "type": "span",
+                },
+              ],
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "rspv now",
+                "className": "header-box__secondary",
+                "replace": false,
+                "to": "/auth/google",
+              },
+              "ref": null,
+              "rendered": "rspv now",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              href="https://github.com/c-clin/bars2nite"
+>
+              <i
+                            aria-hidden="true"
+                            className="fa fa-github-alt"
+              />
+</a>,
+            "className": "github-link",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                aria-hidden="true"
+                className="fa fa-github-alt"
+/>,
+              "href": "https://github.com/c-clin/bars2nite",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "fa fa-github-alt",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
